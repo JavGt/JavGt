@@ -1,0 +1,72 @@
+@use '@scss/mixins' as m;
+@use '@scss/variables' as v;
+
+.footer {
+	margin-top: 0.1rem;
+	background-color: #999;
+	padding: 4rem 0 0 0;
+
+	&__contenido {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-bottom: 1rem;
+
+		@include m.desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(1, 1fr);
+		margin-bottom: 3rem;
+
+		@include m.tablet {
+			margin-bottom: 0;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__bloque {
+		font-size: 1.3rem;
+		border-bottom: 0.1rem solid #fff;
+
+		@include m.tablet {
+			padding-right: 1rem;
+			border-right: 0.1rem solid #fff;
+			border-bottom: none;
+
+			&:last-child {
+				border: none;
+			}
+		}
+		&:last-child {
+			border: none;
+		}
+	}
+
+	&__heading {
+		font-size: 2rem;
+		color: #fff;
+	}
+
+	.redes-sociales {
+		margin-top: 2rem;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		padding-bottom: 7rem;
+
+		img {
+			filter: contrast(0%);
+			height: 3rem;
+			transition: 0.3s ease-in-out;
+
+			&:hover {
+				filter: contrast(60%);
+			}
+		}
+	}
+}

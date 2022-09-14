@@ -1,0 +1,36 @@
+@use '@scss/variables' as v;
+@use '@scss/mixins' as m;
+
+.BtnCV {
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	font-size: 1.2rem;
+	border-radius: 20rem;
+	padding: 0.8rem 2rem;
+	transition-property: background-color, color;
+	transition: 0.5s ease-in-out;
+	border: none;
+
+	@include m.tablet {
+		display: flex;
+	}
+
+	&__text {
+		font-weight: 500;
+	}
+
+	&__icon {
+		font-size: 1.8rem;
+	}
+
+	background-color: v.$color-btn;
+	color: v.$color-secondary;
+
+	&:hover {
+		cursor: pointer;
+		background-color: v.$color-btn-hover;
+		color: v.$color-primary-dark;
+	}
+}

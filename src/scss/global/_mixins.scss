@@ -1,0 +1,51 @@
+@use '@scss/variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+	@media (min-width: v.$telefono) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: v.$tablet) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: v.$desktop) {
+		@content;
+	}
+}
+@mixin desktopXL {
+	@media (min-width: v.$desktopxl) {
+		@content;
+	}
+}
+
+@mixin dark {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin light {
+	@media (prefers-color-scheme: light) {
+		@content;
+	}
+}
+
+@mixin body {
+	min-height: 100vh;
+
+	@include dark {
+		@media (prefers-color-scheme: dark) {
+			background-color: v.$color-bg-dark;
+		}
+	}
+
+	@include light {
+		@media (prefers-color-scheme: light) {
+			background-color: v.$color-bg-light;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+@use '@scss/variables' as v;
+@use '@scss/mixins' as m;
+
+.Home {
+	@include m.body;
+}

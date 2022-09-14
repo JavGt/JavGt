@@ -1,0 +1,40 @@
+@use '@scss/mixins' as m;
+@use '@scss/variables' as v;
+
+.NotFound {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+
+	@include m.body;
+
+	&__content {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 15rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+
+		@include m.dark {
+			color: v.$color-text-dark;
+		}
+		@include m.light {
+			color: v.$color-text-light;
+		}
+	}
+
+	&__description {
+		font-size: 9rem;
+		font-weight: 200;
+		text-transform: capitalize;
+
+		@include m.dark {
+			color: v.$color-text-secondary-dark;
+		}
+		@include m.light {
+			color: v.$color-text-secondary-light;
+		}
+	}
+}

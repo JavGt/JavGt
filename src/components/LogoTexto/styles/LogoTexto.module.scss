@@ -1,0 +1,48 @@
+@use '@scss/variables' as v;
+@use '@scss/mixins' as m;
+
+.LogoTexto {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.6rem;
+
+	&__button {
+		font-size: 2rem;
+
+		border-radius: 20rem;
+		padding: 0.8rem 1rem;
+		border: none;
+	}
+
+	@include m.tablet {
+		&__button {
+			display: none;
+		}
+	}
+
+	@include m.dark {
+		color: v.$color-text-dark;
+	}
+
+	@include m.light {
+		color: v.$color-text-light;
+	}
+
+	a {
+		gap: 0.2rem;
+		font-weight: 700;
+		transition: 0.2s ease-in-out;
+		padding: 0.5rem 0;
+
+		& span {
+			font-weight: 400;
+		}
+
+		&:focus,
+		&:hover {
+			outline: none;
+			opacity: 0.8;
+		}
+	}
+}

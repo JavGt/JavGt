@@ -1,0 +1,22 @@
+@use '@scss/variables' as v;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
+	font-family: v.$font-family;
+}
+@media (min-width: 2600px) {
+	html {
+		font-size: 100%; /*1rem = */
+	}
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
