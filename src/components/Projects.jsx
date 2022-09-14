@@ -44,11 +44,7 @@ const Projects = React.memo(({ limit }) => {
 									<Project key={proyecto.id} proyecto={proyecto} />
 							  ))
 							: Proyectos.map(proyecto => (
-									<Project
-										click={click}
-										key={proyecto.id}
-										proyecto={proyecto}
-									/>
+									<Project click={click} key={proyecto.id} proyecto={proyecto} />
 							  ))}
 					</div>
 				</div>
