@@ -1,0 +1,44 @@
+{
+	"name": "javdev",
+	"version": "1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JavGt/JavGt.git"
+	},
+	"author": "Javier Gutierrez",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JavGt/JavGt/issues"
+	},
+	"main":"electron.js",
+	"homepage": "https://github.com/JavGt/JavGt#readme",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"electron-build": "electron-builder",
+		"electron": "electron electron.js",
+		"release": "yarn vite build && electron-build --publish=always",
+		"start": "concurrently \"cross-env BROWSER=none npm run dev\" \"wait-on http://localhost:3000 && npm run electron\" "
+	},
+	"dependencies": {
+		"@emotion/react": "^11.7.1",
+		"@emotion/styled": "^11.6.0",
+		"baffle": "^0.3.6",
+		"concurrently": "^7.0.0",
+		"cross-env": "^7.0.3",
+		"electron-builder": "^22.14.13",
+		"electron-is-dev": "^2.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-router-dom": "^6.2.1",
+		"typescript": "^4.5.5",
+		"wait-on": "^6.0.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^1.0.7",
+		"electron": "^17.0.0",
+		"sass": "^1.49.7",
+		"vite": "^2.7.2"
+	}
+}
