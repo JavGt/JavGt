@@ -1,0 +1,44 @@
+@use 'variables' as v;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+@media (min-width: 2600px) {
+	html {
+		font-size: 100%; /*1rem = */
+	}
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+*::-webkit-scrollbar {
+	background-color: transparent;
+	width: 2px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: v.$rosa;
+	border-radius: 0.6rem;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+* {
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
