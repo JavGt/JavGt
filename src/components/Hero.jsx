@@ -42,7 +42,6 @@ const Hero = () => {
 					⥥
 				</a>
 			</div>
-			<img src={Wave} alt='imagen wave' className='hero__wave' />
 		</div>
 	);
 };

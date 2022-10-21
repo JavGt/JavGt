@@ -3,14 +3,7 @@
 
 .quote {
 	background: v.$gris;
-	margin-top: -35rem;
-	padding-top: 35rem;
-	padding-bottom: 5rem;
-
-	@include m.tablet {
-		padding-bottom: 10rem;
-		padding-top: 30rem;
-	}
+	padding: 10rem 0;
 
 	&__contenido {
 		display: flex;

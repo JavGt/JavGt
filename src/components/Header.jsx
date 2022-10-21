@@ -6,6 +6,7 @@ import Navegacion from './Navegacion';
 import { useState } from 'react';
 // Styles
 import '../sass/styledComponents/Header.scss';
+import { Notice } from './Notice';
 
 const LogoTexto = () => {
 	return (
@@ -36,28 +37,30 @@ const Header = () => {
 	};
 
 	return (
-		<header
-			className={`header 
-				${verNav ? 'abierto' : 'cerrado'} 
-				${scroll ? 'scroll' : ''} `}
-		>
-			<div
-				className={` header__contenido container 
-					${verNav ? 'abierto' : 'cerrado'} `}
-			>
-				<div className='header__logo'>
-					<LogoTexto />
+		<>
+			<header
+				className={`header 
+			${verNav ? 'abierto' : 'cerrado'} 
+			${scroll ? 'scroll' : ''} `}>
+				<Notice />
 
-					<button onClick={handleNav} className='btn__ham '>
-						boton de navegacion
-						<span className='btn__ham-1'></span>
-						<span className='btn__ham-2'></span>
-					</button>
+				<div
+					className={` header__contenido container 
+				${verNav ? 'abierto' : 'cerrado'} `}>
+					<div className='header__logo'>
+						<LogoTexto />
+
+						<button onClick={handleNav} className='btn__ham '>
+							boton de navegacion
+							<span className='btn__ham-1'></span>
+							<span className='btn__ham-2'></span>
+						</button>
+					</div>
+
+					<Navegacion tipo={'header'} />
 				</div>
-
-				<Navegacion tipo={'header'} />
-			</div>
-		</header>
+			</header>
+		</>
 	);
 };
 

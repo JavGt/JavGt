@@ -1,4 +1,4 @@
-import CV from '../documents/Francisco Javier Baez Gutierrez (4).pdf';
+import CV from '../documents/CV-FJBG.pdf';
 import '../sass/styledComponents/BtnCv.scss';
 
 const BtnCv = () => {

@@ -37,8 +37,18 @@ ul {
 a {
 	text-decoration: none;
 }
-.container {
-	max-width: 120rem;
-	width: 90%;
+
+[class*='container'] {
 	margin: 0 auto;
+	width: 90%;
+}
+
+.container {
+	max-width: 1280px;
+}
+.container-md {
+	max-width: 1024px;
+}
+.container-sm {
+	max-width: 768px;
 }

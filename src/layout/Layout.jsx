@@ -1,3 +1,4 @@
+import { ShowExtension } from '@/components/ShowExtension';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 import { Outlet } from 'react-router-dom';
@@ -7,6 +8,7 @@ const Layout = () => {
 		<>
 			<Header />
 			<Outlet />
+			<ShowExtension />
 			<Footer />
 		</>
 	);

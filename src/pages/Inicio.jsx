@@ -1,7 +1,8 @@
-import Hero from '../components/Hero';
-import Projects from '../components/Projects';
-import Quote from '../components/Quote';
-import Skills from '../components/Skills';
+import React from 'react';
+import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
+import Quote from '@/components/Quote';
+import Skills from '@/components/Skills';
 
 const Inicio = () => {
 	return (
