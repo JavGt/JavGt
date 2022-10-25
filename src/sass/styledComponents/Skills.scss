@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.skills {
+	margin-top: 0.1rem;
+	width: 100%;
+	background-color: v.$gris;
+	padding: 2rem 0 6rem 0;
+	position: relative;
+
+	@include m.linea(-3rem, -3rem);
+
+	h2 {
+		@include m.heading;
+	}
+
+	.tecnologias {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}

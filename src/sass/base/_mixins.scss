@@ -1,0 +1,57 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+	@media (min-width: v.$telefono) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: v.$tablet) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: v.$desktop) {
+		@content;
+	}
+}
+@mixin desktopXL {
+	@media (min-width: v.$desktopxl) {
+		@content;
+	}
+}
+
+@mixin heading {
+	font-family: v.$fuente_2;
+	text-align: center;
+	margin-bottom: 3rem;
+	font-weight: 700;
+	color: v.$negro;
+	font-size: 4rem;
+	letter-spacing: 1.2rem;
+	text-transform: uppercase;
+
+	span {
+		display: block;
+		color: v.$negro;
+		text-shadow: 0px 0px 5px darken(v.$gris, 40%);
+		font-weight: 500;
+	}
+}
+
+@mixin linea($telefono, $tablet) {
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0.1rem;
+		height: 7rem;
+		background-color: lighten(v.$negro, 30%);
+		right: 50%;
+		top: $telefono;
+
+		@include tablet {
+			top: $tablet;
+		}
+	}
+}
