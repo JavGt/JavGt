@@ -1,0 +1,21 @@
+@use '@scss/helpers/variables' as v;
+
+.tab {
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	border: 1px solid map-get(v.$palette, 'text');
+	justify-content: center;
+	border-radius: 0.5rem;
+	gap: 1rem;
+
+	&__image {
+		height: 3rem;
+		object-fit: cover;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+}
