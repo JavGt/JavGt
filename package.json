@@ -1,34 +1,28 @@
 {
-	"name": "javdev",
-	"version": "1.0",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/JavGt/JavGt.git"
-	},
-	"author": "Javier Gutierrez",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/JavGt/JavGt/issues"
-	},
-	"main": "electron.js",
-	"homepage": "https://github.com/JavGt/JavGt#readme",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@emotion/react": "^11.7.1",
-		"@emotion/styled": "^11.6.0",
-		"baffle": "^0.3.6",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-icons": "^4.6.0",
-		"react-router-dom": "^6.2.1"
-	},
-	"devDependencies": {
-		"@vitejs/plugin-react": "^1.0.7",
-		"sass": "^1.49.7",
-		"vite": "^2.7.2"
-	}
+  "name": "javgttz",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.13",
+    "@reduxjs/toolkit": "^1.9.1",
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  }
 }

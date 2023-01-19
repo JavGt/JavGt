@@ -1,0 +1,80 @@
+@use '@scss/helpers/variables' as v;
+
+.hero {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 'image' 'text';
+	grid-gap: 2rem;
+	margin: 20px 0;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'text image';
+	}
+
+	&__text {
+		grid-area: text;
+		font-size: 1.6rem;
+		text-align: start;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 5rem;
+		font-weight: 800;
+		line-height: 0.9;
+
+		& hr {
+			margin: 1.5rem 0;
+		}
+
+		@media (min-width: 768px) {
+			margin-top: 0;
+		}
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		color: map-get(v.$palette, 'text');
+		margin: 0;
+	}
+
+	&__image {
+		grid-area: image;
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__button {
+		border: 1px solid #000000;
+		margin-top: 2rem;
+		padding: 1.5rem 4rem;
+		border-radius: 14rem;
+		background: transparent;
+		font-weight: 600;
+		cursor: pointer;
+		width: fit-content;
+		transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		color: inherit;
+
+		& svg {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		&:hover {
+			background: #000;
+			color: map-get(v.$palette, 'background');
+			cursor: pointer;
+		}
+	}
+}

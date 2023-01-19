@@ -1,0 +1,47 @@
+@use '@scss/helpers/variables' as v;
+
+.wrapper-slider {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+
+	&__slider {
+		width: 100%;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__scrolling-right::after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 10rem;
+		background: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			map-get(v.$palette, 'background')
+		);
+		top: 0;
+		height: 100%;
+		right: 0;
+	}
+
+	&__scrolling-left::before {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 10rem;
+		background: linear-gradient(
+			to left,
+			rgba(255, 255, 255, 0),
+			map-get(v.$palette, 'background')
+		);
+		top: 0;
+		height: 100%;
+		left: 0;
+	}
+}
