@@ -1,5 +1,5 @@
 import './Hero.scss';
-import avatar from '@/assets/image/avatar/man-playing-video-game.svg';
+import avatar from '/image/avatar/man-playing-video-game.svg';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
 import CV from '@/docs/pdf/Francisco_Javier_Baez_Gutierrez_Curriculum.pdf';
 
