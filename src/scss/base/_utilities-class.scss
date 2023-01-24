@@ -1,7 +1,27 @@
 @use '@scss/helpers/variables' as v;
+@use '@scss/helpers/mixins' as m;
 
 .container {
-	width: 90%;
-	max-width: 120rem;
+	max-width: 76.8rem;
 	margin: 0 auto;
+	padding: 0 2rem;
+	// border: 1px solid green;
+
+	& > * {
+		// border: 1px solid red;
+	}
+
+	@include m.lg {
+		max-width: 102.4rem;
+		padding: 0 3.2rem;
+	}
+
+	@include m.xl {
+		max-width: 144rem;
+		padding: 0 6.1rem;
+	}
+}
+
+.title {
+	font-size: clamp(2rem, 3vw, 3rem);
 }

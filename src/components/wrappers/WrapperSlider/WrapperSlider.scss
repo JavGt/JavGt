@@ -14,34 +14,39 @@
 			display: none;
 		}
 	}
-
-	&__scrolling-right::after {
+	&::after,
+	&::before {
 		position: absolute;
 		content: '';
 		display: block;
+		top: 0;
 		width: 10rem;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&::after {
 		background: linear-gradient(
 			to right,
 			rgba(255, 255, 255, 0),
 			map-get(v.$palette, 'background')
 		);
-		top: 0;
-		height: 100%;
 		right: 0;
 	}
 
-	&__scrolling-left::before {
-		position: absolute;
-		content: '';
-		display: block;
-		width: 10rem;
+	&::before {
 		background: linear-gradient(
 			to left,
 			rgba(255, 255, 255, 0),
 			map-get(v.$palette, 'background')
 		);
-		top: 0;
-		height: 100%;
 		left: 0;
+		opacity: 0;
+	}
+
+	&__scrolling-right::after,
+	&__scrolling-left::before {
+		opacity: 1;
 	}
 }

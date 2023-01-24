@@ -1,17 +1,14 @@
 import './Header.scss';
-export interface HeaderInterface {}
 
-const Header: React.FC<HeaderInterface> = () => {
+const Header = () => {
 	return (
-		<div className='header'>
-			<div className='container header__content'>
-				<div className='header__logo'>
-					Javier <span>Gutierrez</span>
-				</div>
+		<header className='header'>
+			<div className='header__container container'>
+				<div className='header__title'>Javier Gutierrez</div>
 
-				<div>¡Pagina en construcción!</div>
+				<span className='header__alert'>Pagina en construcción </span>
 			</div>
-		</div>
+		</header>
 	);
 };
 

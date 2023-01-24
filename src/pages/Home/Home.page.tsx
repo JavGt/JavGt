@@ -1,16 +1,17 @@
+import { Blockquote } from '@/components/section/Blockquote';
 import { Hero } from '@/components/section/Hero';
+import { CardHelp } from '@/components/UI/CardHelp';
 import { Tabs } from '@/components/UI/Tabs';
-import './Home.page.scss';
 
 const Home = () => {
 	return (
-		<div className='home'>
+		<main>
 			<Hero />
 			<hr />
-			<div className='container'>
-				<Tabs />
-			</div>
-		</div>
+			<Blockquote />
+			{/* <Tabs /> */}
+			<CardHelp />
+		</main>
 	);
 };
 

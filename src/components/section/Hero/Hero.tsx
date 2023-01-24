@@ -5,19 +5,20 @@ import CV from '@/docs/pdf/Francisco_Javier_Baez_Gutierrez_Curriculum.pdf';
 
 const Hero = () => {
 	return (
-		<div className='container'>
-			<div className='hero'>
-				<div className='hero__text'>
+		<section className='hero'>
+			<div className=' hero__content container'>
+				<div className='hero__information'>
 					<span className='hero__title'>
-						Front-end developer &<br></br>
-						Mentor
-						<hr />
+						Front-end <strong className='suffix'>developer</strong>
 					</span>
+
+					<hr />
 
 					<p className='hero__description'>
 						Desarrollo <strong>sitios web</strong> profesionales, adaptables a cualquier
-						dispositivo.
+						dispositivo. 🚀
 					</p>
+
 					<a
 						href={CV}
 						target='_blank'
@@ -30,9 +31,11 @@ const Hero = () => {
 					</a>
 				</div>
 
-				<img className='hero__image' src={avatar} alt='Avatar' />
+				<picture className='hero__image'>
+					<img src={avatar} alt='Avatar' />
+				</picture>
 			</div>
-		</div>
+		</section>
 	);
 };
 

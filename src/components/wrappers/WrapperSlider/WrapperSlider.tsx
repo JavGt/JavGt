@@ -9,37 +9,35 @@ export interface WrapperSliderInterface {
 const WrapperSlider: React.FC<WrapperSliderInterface> = ({ children }) => {
 	const [isScrollingLeft, setIsScrollingLeft] = useState(false);
 	const [isScrollingRight, setIsScrollingRight] = useState(false);
-	const [isScrolling, setIsScrolling] = useState(true);
 
 	const sliderRef = useRef<HTMLDivElement>(null);
 
 	const handleWheel = (e: WheelEvent) => {
-		const slider = sliderRef.current;
-		if (!slider) return;
-
 		e.preventDefault();
 
 		const x = e.deltaY;
 		const y = e.deltaX;
 
-		slider.scrollLeft += x ? x : y;
+		sliderRef.current!.scrollLeft += x ? x : y;
+	};
+
+	const handleScroll = () => {
+		const slider = sliderRef.current;
+		if (!slider) return;
 
 		const scrollLeft = slider.scrollLeft;
 		const scrollWidth = slider.scrollWidth;
 		const clientWidth = slider.clientWidth;
 
 		setIsScrollingLeft(scrollLeft > 0);
-
 		setIsScrollingRight(scrollLeft + clientWidth < scrollWidth);
-	};
-
-	const handleNotScrolling = () => {
-		setIsScrolling(prevIsScrolling => !prevIsScrolling);
+		// Hacer un scroll infinito
 	};
 
 	useEffect(() => {
 		const slider = sliderRef.current;
 		if (!slider) return;
+
 		const scrollWidth = slider.scrollWidth;
 		const clientWidth = slider.clientWidth;
 
@@ -58,10 +56,9 @@ const WrapperSlider: React.FC<WrapperSliderInterface> = ({ children }) => {
 				className={clsx('wrapper-slider', {
 					'wrapper-slider__scrolling-left': isScrollingLeft,
 					'wrapper-slider__scrolling-right': isScrollingRight,
-					'wrapper-slider__scrolling': isScrolling,
 				})}
 			>
-				<div ref={sliderRef} className='wrapper-slider__slider'>
+				<div onScroll={handleScroll} ref={sliderRef} className='wrapper-slider__slider'>
 					{children}
 				</div>
 			</div>

@@ -10,16 +10,18 @@ export interface TabsProps {
 
 const Tabs = ({ technologies }: TabsProps) => {
 	return (
-		<div className='tabs'>
-			<h1 className='container__title'>Skills</h1>
+		<div className='container'>
+			<div className='tabs'>
+				<h1 className='title'>Skills</h1>
 
-			<WrapperSlider>
-				<div className='tabs__content'>
-					{technologies.map(technology => (
-						<Tab technology={technology} key={technology.name} />
-					))}
-				</div>
-			</WrapperSlider>
+				<WrapperSlider>
+					<div className='tabs__content'>
+						{technologies.map(technology => (
+							<Tab technology={technology} key={technology.name} />
+						))}
+					</div>
+				</WrapperSlider>
+			</div>
 		</div>
 	);
 };

@@ -1,20 +1,17 @@
 $fonts: (
-	'primary': 'Albert Sans',
-	'secondary': 'Montserrat',
+	'primary': 'Raleway',
 );
 
 $palette: (
 	'background': #f5f5f5,
 	'paper': #ffffff,
-	'text': #616161,
+	'text': #111,
 	'divider': #e0e0e0,
 );
 
 $breakpoints: (
 	// Mobile
-	'telephone-sm': 320px,
 	'telephone': 375px,
-	'telephone-lg': 425px,
 
 	// Tablet
 	'tablet-sm': 600px,
@@ -24,11 +21,4 @@ $breakpoints: (
 	'desktop': 1024px,
 	'desktop-lg': 1440px,
 	'desktop-4k': 2560px
-);
-
-// Container sizes
-$container: (
-	'container-lg': 1280px,
-	'container-md': 1024px,
-	'container-sm': 768px,
 );
