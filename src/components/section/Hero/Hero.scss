@@ -45,6 +45,10 @@
 			font-size: clamp(4.5rem, 7vw, 9rem);
 			text-transform: uppercase;
 			background: #ddd;
+
+			&::selection {
+				background: #ccc;
+			}
 		}
 
 		& hr {
